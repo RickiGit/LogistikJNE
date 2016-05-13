@@ -11,4 +11,5 @@
     <string-array name="country">
         <item>Indonesia</item>
     </string-array>
+    <string name="title_activity_maps_activity_coba">Map</string>
 </resources>

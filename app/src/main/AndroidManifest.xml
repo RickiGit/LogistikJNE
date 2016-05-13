@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.altrovis.pos">
+    package="com.altrovis.jne">
 
     <permission
-        android:name="com.altrovis.pos.permission.MAPS_RECEIVE"
+        android:name="com.altrovis.jne.permission.MAPS_RECEIVE"
         android:protectionLevel="signature" />
 
     <uses-permission android:name="com.altrovis.pos.permission.MAPS_RECEIVE" />
@@ -24,35 +24,35 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ActivityLogin"
-            android:windowSoftInputMode="stateHidden"
-            android:screenOrientation="portrait">
+        <activity
+            android:name=".ActivityLogin"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".ActivityMain"
             android:label="@string/title_activity_activity_main"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateHidden"
-            android:screenOrientation="portrait"/>
-
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".ActivityRegistration"
+            android:screenOrientation="portrait"
             android:theme="@style/AppThemeForm"
-            android:windowSoftInputMode="stateHidden"
-            android:screenOrientation="portrait"/>
-
-        <activity android:name=".ActivityActivation"
-            android:windowSoftInputMode="stateHidden"
-            android:screenOrientation="portrait"/>
-
-        <activity android:name=".ActivityDetailPickUp"
-            android:windowSoftInputMode="stateHidden"
-            android:screenOrientation="portrait"></activity>
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ActivityActivation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ActivityDetailPickUp"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

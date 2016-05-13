@@ -1,4 +1,4 @@
-package com.altrovis.pos;
+package com.altrovis.jne;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:theme="@style/AppThemeForm"
-    tools:context="com.altrovis.pos.ActivityActivation">
+    tools:context="com.altrovis.jne.ActivityActivation">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">

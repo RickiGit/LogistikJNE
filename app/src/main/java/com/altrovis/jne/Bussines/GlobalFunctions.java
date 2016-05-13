@@ -1,8 +1,7 @@
-package com.altrovis.pos.Bussines;
+package com.altrovis.jne.Bussines;
 
 import android.content.Context;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
 import android.location.Address;
 import android.location.Criteria;
 import android.location.Geocoder;

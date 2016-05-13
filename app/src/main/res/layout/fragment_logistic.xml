@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.altrovis.pos.FragmentLogistic"
+    tools:context="com.altrovis.jne.FragmentLogistic"
     android:theme="@style/AppThemeForm">
 
     <ScrollView
@@ -19,14 +19,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_marginBottom="0dp"
-                android:hint="From Location, POS Code, City"/>
+                android:hint="From Location, Postal Code, City"/>
 
             <EditText
                 android:id="@+id/EditTextToLocation"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_marginBottom="10dp"
-                android:hint="To Location, POS Code, City"/>
+                android:hint="To Location, Postal Code, City"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -38,7 +38,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginBottom="10dp"
-                    class="com.altrovis.pos.Bussines.HandleMapsTouch"/>
+                    class="com.altrovis.jne.Bussines.HandleMapsTouch"/>
                 <TextView
                     android:id="@+id/TextViewNamePlace"
                     android:layout_width="wrap_content"

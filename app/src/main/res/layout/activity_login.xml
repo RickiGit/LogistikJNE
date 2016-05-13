@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/background_jne"
     android:orientation="vertical"
-    tools:context="com.altrovis.pos.ActivityLogin">
+    tools:context="com.altrovis.jne.ActivityLogin">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

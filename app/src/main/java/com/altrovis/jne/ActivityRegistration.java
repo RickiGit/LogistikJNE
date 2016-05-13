@@ -1,4 +1,4 @@
-package com.altrovis.pos;
+package com.altrovis.jne;
 
 import android.content.Intent;
 import android.support.v7.app.ActionBar;
@@ -38,8 +38,6 @@ public class ActivityRegistration extends AppCompatActivity {
     }
 
     public void textViewSignInToActivitySignIn(View view){
-        Intent intent = new Intent(this, ActivityLogin.class);
-        startActivity(intent);
         finish();
     }
 

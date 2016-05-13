@@ -1,4 +1,4 @@
-package com.altrovis.pos.Bussines;
+package com.altrovis.jne.Bussines;
 
 import android.content.Context;
 import android.os.Bundle;

@@ -1,4 +1,4 @@
-package com.altrovis.pos;
+package com.altrovis.jne;
 
 import android.content.Context;
 import android.content.Intent;
@@ -24,14 +24,13 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.altrovis.pos.Bussines.GlobalFunctions;
-import com.altrovis.pos.Bussines.HandleMapsTouch;
+import com.altrovis.jne.Bussines.GlobalFunctions;
+import com.altrovis.jne.Bussines.HandleMapsTouch;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.io.IOException;
 import java.util.List;
@@ -69,7 +68,7 @@ public class FragmentLogistic extends Fragment {
                 view = inflater.inflate(R.layout.fragment_logistic, container, false);
             }
         } catch (InflateException e) {
-            Toast.makeText(getActivity(), "Masih ada bug", Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_LONG).show();
         }
 
         // Get Layout
@@ -77,12 +76,9 @@ public class FragmentLogistic extends Fragment {
         editTextToLocation = (EditText)view.findViewById(R.id.EditTextToLocation);
         editTextFromLocation = (EditText)view.findViewById(R.id.EditTextFromLocation);
         textViewNamePlace = (TextView)view.findViewById(R.id.TextViewNamePlace);
-        //progressBarNamePlace = (ProgressBar) view.findViewById(R.id.ProgressBarNamePlace);
-        //linearLayoutNamePlace = (LinearLayout) view.findViewById(R.id.LinearLayoutNamePlace);
         final ScrollView scroll = (ScrollView) view.findViewById(R.id.ScrollViewLogistic);
 
         // Set Visible Gone
-        //linearLayoutNamePlace.setVisibility(View.GONE);
         textViewNamePlace.setVisibility(View.GONE);
 
         // Set Default Google Map
@@ -186,7 +182,7 @@ public class FragmentLogistic extends Fragment {
                         }
                     });
                 } else if (myLocation == null) {
-                    Toast.makeText(view.getContext(), "Posisi anda tidak ditemukan", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(view.getContext(), "Posisi anda tidak ditemukan, silakan aktifkan fitur deteksi lokasi pada perangkat Anda", Toast.LENGTH_SHORT).show();
                 }
             }
         }
@@ -199,6 +195,11 @@ public class FragmentLogistic extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), ActivityDetailPickUp.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("from", editTextFromLocation.getText().toString());
+                bundle.putString("to", editTextToLocation.getText().toString());
+                intent.putExtras(bundle);
+
                 startActivity(intent);
             }
         });
